@@ -1,6 +1,10 @@
 # Ignore node_modules in all projects
 **/node_modules/
 
+node_modules/
+.env
+*.json
+
 # Ignore .env files in all projects (never push secrets!)
 **/.env
 

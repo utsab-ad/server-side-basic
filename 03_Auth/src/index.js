@@ -5,6 +5,7 @@ import AuthRoute from "./routes/Auth.routes.js";
 import VerifiedRoute from "./routes/Verified.routes.js";
 import cookieParser from "cookie-parser";
 import OtpRoute from "./routes/Otp.routes.js";
+import cors from "cors";
 
 dotenv.config();
 
@@ -17,11 +18,16 @@ await ConnectDB();
 app.use(express.json());
 app.use(cookieParser());
 
+app.use(cors({
+    origin: process.env.FRONTEND_URL,
+    credentials: true
+}));
+
 app.get("/", (req, res) => {
     res.send("Hello there this is Home route");
 });
 
-app.use("/user", VerifiedRoute);
+app.use("/in", VerifiedRoute);
 
 app.use("/otp", OtpRoute);
 

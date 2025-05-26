@@ -1,53 +1,25 @@
-# Ignore node_modules in all projects
-**/node_modules/
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-node_modules/
+node_modules
+dist
+dist-ssr
+*.local
 .env
-*.json
 
-# Ignore .env files in all projects (never push secrets!)
-**/.env
-
-# Ignore log files
-**/npm-debug.log
-**/yarn-debug.log
-**/yarn-error.log
-**/pnpm-debug.log
-
-# Ignore OS-specific junk
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
 .DS_Store
-Thumbs.db
-
-# Ignore VSCode settings and history
-.vscode/
-.history/
-
-# Ignore build outputs
-**/dist/
-**/build/
-
-# Ignore test coverage outputs
-**/coverage/
-
-# Ignore all .json files except package.json
-*.json
-!package.json
-
-# Ignore environment config files
-**/.env.*
-**/.env.local
-**/.env.development
-**/.env.production
-**/.env.test
-
-# Ignore compiled files and cache
-**/*.log
-**/.cache/
-**/.turbo/
-**/.next/
-**/.vercel/
-
-# Optional: Ignore uploads/temp
-**/uploads/
-**/tmp/
-**/temp/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
